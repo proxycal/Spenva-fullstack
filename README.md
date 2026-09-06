@@ -25,17 +25,27 @@ Context API (theme persistence)
 7. Responsive dashboards (Main / Friends / Group views)
 
 # 🏗️ Architecture
+
 The backend follows a clean layered architecture:
+
 Controller  →  Service  →  Repository  →  PostgreSQL
+
 1.Controller Layer — exposes REST endpoints, handles request/response mapping
+
 2.Service Layer — houses business logic (balance computation, debt simplification, validation), transaction boundaries
+
 3.Repository Layer — Spring Data JPA interfaces over Hibernate entities
 
 # 🧮 Debt Simplification Algorithm
+
 Instead of surfacing every raw pairwise IOU, Spenva reduces group debts to the minimum number of transactions needed to settle everyone up:
+
 ->Aggregate all expenses/splits into a net balance per user (positive = owed, negative = owes).
+
 ->Partition users into creditors and debtors based on balance sign.
+
 ->Greedily match the largest creditor with the largest debtor, settle the smaller amount, and repeat until all balances reach zero.
+
 This greedy approach gives a close-to-optimal reduction in settlement transactions with efficient time complexity, avoiding the need to track every individual expense-level debt. 
 
 # 🔐 Authentication & Security

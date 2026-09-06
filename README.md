@@ -6,11 +6,14 @@ Live App:  splitwise-backend-five.vercel.app
 
 # 🚀 Tech Stack
 Backend
+
 Java + Spring Boot
 PostgreSQL (via JPA/Hibernate)
 Spring Security + JWT Authentication
 Maven
+
 Frontend
+
 React + TypeScript
 Tailwind CSS
 Context API (theme persistence)
@@ -60,10 +63,15 @@ Role-based, member-scoped access to group and expense operations
 REST endpoints organized by resource:
 
 /api/auth         - register, login
+
 /api/users        - user profile management
+
 /api/friends      - friend requests & management
+
 /api/groups       - group creation & membership
+
 /api/expenses     - expense creation, splitting
+
 /api/settlements  - debt settlement records
 
 Validation (e.g. split totals matching expense amount, settlement amounts not exceeding owed balance) happens at the service layer before persistence.
@@ -73,21 +81,31 @@ Validation (e.g. split totals matching expense amount, settlement amounts not ex
 **Prerequisites
 
 Java 17+
+
 Maven
+
 PostgreSQL
+
 Node.js + npm (for frontend)
 
 **Backend Setup
 
 bash
+
 cd backend
+
 mvn clean install
+
 mvn spring-boot:run
 
 **Frontend Setup
+
 bash
+
 cd frontend
+
 npm install
+
 npm run dev
 
 # 📌 Note

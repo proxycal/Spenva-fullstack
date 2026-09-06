@@ -63,7 +63,6 @@ Node.js + npm (for frontend)
 **Backend Setup
 bash
 cd backend
-# configure application.properties with your PostgreSQL credentials
 mvn clean install
 mvn spring-boot:run
 **Frontend Setup

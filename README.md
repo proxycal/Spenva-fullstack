@@ -1,7 +1,7 @@
 # Spenva 💸
 
 A full-stack expense & debt management platform inspired by Splitwise track shared expenses, manage groups and friends, and settle debts with a minimal number of transactions.
-# Live App: splitwise-backend-five.vercel.app
+Live App: splitwise-backend-five.vercel.app
 
 # 🚀 Tech Stack
 Backend
